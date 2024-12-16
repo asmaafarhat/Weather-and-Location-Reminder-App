@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Weather</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="weather">
+    <ion-card-header>
+      <ion-card-title>{{ weather.name }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Temperature: {{ weather.main.temp }}°C</p>
+      <p>Conditions: {{ weather.weather[0].description }}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button expand="block" [routerLink]="['/add-reminder']">Add Reminders</ion-button>
+</ion-content>
